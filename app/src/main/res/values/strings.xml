@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Jeu X-O Tournoi</string>
+    <string name="choose_symbol">Choisissez votre symbole :</string>
+    <string name="choose_tournament_games">Nombre de parties du tournoi :</string>
+    <string name="play">Jouer</string>
+    <string name="game_rules">Principe du jeu</string>
+    <string name="show_last_scores">Afficher les scores sauvegardés</string>
+    <string name="no_saved_tournament">Aucun tournoi sauvegardé</string>
+</resources>
