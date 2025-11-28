@@ -23,6 +23,14 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="50dp" />
 
+        <!-- ICÔNE AJOUTÉE ICI -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="Icône de l'application X-O" />
+
         <!-- Sélection du symbole -->
         <TextView
             android:layout_width="wrap_content"
@@ -112,17 +120,7 @@
             android:padding="12dp" />
 
         <!-- Zone pour afficher les scores sauvegardés -->
-        <TextView
-            android:id="@+id/savedScoresText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Aucun tournoi sauvegardé"
-            android:textSize="14sp"
-            android:textColor="#757575"
-            android:gravity="center"
-            android:padding="16dp"
-            android:background="@android:color/white"
-            android:visibility="visible" />
+
 
     </LinearLayout>
 

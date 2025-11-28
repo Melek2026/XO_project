@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    android:gravity="center">
+
+    <!-- En-tête avec le numéro du round -->
+    <TextView
+        android:id="@+id/roundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2/5 Rounds"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Container pour les informations des joueurs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <!-- Joueur 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/player1Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3" />
+
+        </LinearLayout>
+
+        <!-- Séparateur -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="#E0E0E0"
+            android:layout_marginHorizontal="20dp" />
+
+        <!-- Joueur 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FF5722"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/player2Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FF5722" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Grille de jeu 3x3 -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="@drawable/grid_background"
+        android:layout_marginBottom="40dp">
+
+        <!-- Ligne 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cell00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 1 colonne 1, vide" />
+
+            <Button
+                android:id="@+id/cell01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 1 colonne 2, vide" />
+
+            <Button
+                android:id="@+id/cell02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 1 colonne 3, vide" />
+
+        </LinearLayout>
+
+        <!-- Ligne 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cell10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 2 colonne 1, vide" />
+
+            <Button
+                android:id="@+id/cell11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 2 colonne 2, vide" />
+
+            <Button
+                android:id="@+id/cell12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 2 colonne 3, vide" />
+
+        </LinearLayout>
+
+        <!-- Ligne 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cell20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 3 colonne 1, vide" />
+
+            <Button
+                android:id="@+id/cell21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 3 colonne 2, vide" />
+
+            <Button
+                android:id="@+id/cell22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_background"
+                android:text=""
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_margin="2dp"
+                android:contentDescription="Cellule ligne 3 colonne 3, vide" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Indicateur de tour -->
+    <TextView
+        android:id="@+id/turnIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Turn"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:padding="12dp"
+        android:background="@drawable/turn_indicator_background" />
+
+    <!-- Bouton Retour -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:textSize="16sp"
+        android:background="@drawable/button_secondary"
+        android:textColor="#212121"
+        android:layout_marginTop="30dp"
+        android:padding="12dp" />
+    <!-- Compteur de matches joués -->
+    <!-- Compteur de matches -->
+    <!-- Compteur de matches - À ajouter près du bouton RETOUR -->
+    <TextView
+        android:id="@+id/matchesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matches 0"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>
